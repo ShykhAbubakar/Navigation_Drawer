@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_drawer/home_screen.dart';
+import 'package:navigation_drawer/screen_three.dart';
+import 'package:navigation_drawer/screen_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      initialRoute: HomeScreen.id,
+      routes: {
+        HomeScreen.id : (context) => HomeScreen(),
+        ScreenTwo.id : (context) => ScreenTwo(),
+        ScreenThree.id : (context) => ScreenThree(),
+      },
+      // home: HomeScreen(
+      // ),
     );
   }
 }

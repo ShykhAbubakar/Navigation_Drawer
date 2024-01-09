@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_drawer/screen_two.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const String id= 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -26,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
          Center(
            child: TextButton(
              onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenTwo()));
              },
              child: const Text('Home Screen'),
            ),
