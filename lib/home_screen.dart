@@ -13,6 +13,41 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+           UserAccountsDrawerHeader(
+             currentAccountPicture: CircleAvatar(
+               backgroundImage: NetworkImage('https://i.pinimg.com/736x/f8/66/8e/f8668e5328cfb4938903406948383cf6.jpg'),
+             ),
+               accountName: Text('AbuBakar'),
+               accountEmail: Text('Shykhabubakar99@gmail.com')
+           ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: (){
+
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.calculate),
+              title: Text('Calculate'),
+              onTap: (){
+
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.cabin),
+              title: Text('Cabin'),
+              onTap: (){
+                Navigator.pushNamed(context, ScreenTwo.id);
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: const Center(
             child: Text(
